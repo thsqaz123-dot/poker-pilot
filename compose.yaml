@@ -1,0 +1,18 @@
+name: poker-pilot
+
+x-default-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  poker-pilot:
+    build:
+      context: .
+    ports:
+      # Use the host's Tailscale IP in POKER_PILOT_BIND for Tailscale-only access.
+      - "${POKER_PILOT_BIND:-0.0.0.0}:${POKER_PILOT_PORT:-4173}:80"
+    init: true
+    logging: *default-logging
+    restart: unless-stopped

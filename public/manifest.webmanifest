@@ -1,0 +1,13 @@
+{
+  "name": "Poker Pilot",
+  "short_name": "PokerPilot",
+  "description": "친구들과 즐기는 텍사스 홀덤 테이블 매니저",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#071b15",
+  "theme_color": "#071b15",
+  "icons": [
+    { "src": "/poker-chip.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
